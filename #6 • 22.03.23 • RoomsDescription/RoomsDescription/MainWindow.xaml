@@ -1,0 +1,176 @@
+﻿<Window x:Class="RoomsDescription.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomsDescription"
+        mc:Ignorable="d"
+        Title="Помещения" Height="600" Width="1200" MinHeight="600" MinWidth="1200">
+    <Grid ShowGridLines="False" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Помещение -->
+        <Border Grid.Row="0" Grid.Column="0" Background="#aae2ab" BorderBrush="Black" BorderThickness="2">
+            <Grid ShowGridLines="False" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовок -->
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Помещение" FontSize="16px" FontWeight="Bold" Padding="0"/>
+
+                <!-- Длина -->
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Длина:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBLenghtR" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+
+                <!-- Ширина -->
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Content="Ширина:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBWidthR" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+            </Grid>
+        </Border>
+
+        <!-- Кнопка "Добавить помещение" -->
+        <Button x:Name="BAddRoom" Grid.Row="1" Grid.Column="0" Content="Добавить" FontSize="16px" Margin="5" Click="BAddRoom_Click"/>
+
+        <!-- Жилое помещение -->
+        <Border Grid.Row="0" Grid.Column="1" Background="#adade5" BorderBrush="Black" BorderThickness="2">
+            <Grid ShowGridLines="False" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовок -->
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Жилое помещение" FontSize="16px" FontWeight="Bold" Padding="0"/>
+
+                <!-- Длина -->
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Длина:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBLenghtL" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+
+                <!-- Ширина -->
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Content="Ширина:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBWidthL" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+
+                <!-- Число окон -->
+                <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Content="Число окон:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBNumW" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+            </Grid>
+        </Border>
+
+        <!-- Кнопка "Добавить жилое помещение" -->
+        <Button x:Name="BAddLivingRoom" Grid.Row="1" Grid.Column="1" Content="Добавить" FontSize="16px" Margin="5" Click="BAddLivingRoom_Click"/>
+
+        <!-- Офис -->
+        <Border Grid.Row="0" Grid.Column="2" Background="#badbe9" BorderBrush="Black" BorderThickness="2">
+            <Grid ShowGridLines="False" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовок -->
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Офис" FontSize="16px" FontWeight="Bold" Padding="0"/>
+
+                <!-- Длина -->
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Длина:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBLenghtO" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+
+                <!-- Ширина -->
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Content="Ширина:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBWidthO" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+
+                <!-- Число розеток -->
+                <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Content="Число розеток:" FontSize="16px" Padding="0"/>
+                <TextBox x:Name="TBNumS" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="16px" TextChanged="TextBoxes_TextChanged"/>
+            </Grid>
+        </Border>
+
+        <!-- Кнопка "Добавить офис" -->
+        <Button x:Name="BAddOffice" Grid.Row="1" Grid.Column="2" Content="Добавить" FontSize="16px" Margin="5" Click="BAddOffice_Click"/>
+
+        <!-- Список помещний -->
+        <Border Grid.Row="0" Grid.Column="3" Background="#aaaab0" BorderBrush="Black" BorderThickness="2">
+            <Grid ShowGridLines="False" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Заголовок -->
+                <Label Grid.Row="0" Grid.Column="0" Content="Список помещний" FontWeight="Bold" FontSize="16px" Padding="0"/>
+
+                <!-- Список помещений -->
+                <ScrollViewer Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <Label x:Name="ListRooms" FontSize="16px" Padding="0"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+
+        <!-- Кнопка "Выдать список помещений" -->
+        <Button x:Name="BGetList" Grid.Row="1" Grid.Column="3" Content="Выдать" FontSize="16px" Margin="5" Click="BGetList_Click"/>
+    </Grid>
+</Window>
